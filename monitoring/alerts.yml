@@ -1,0 +1,11 @@
+groups:
+  - name: demo-app
+    rules:
+      - alert: DemoAppDown
+        expr: up{job="demo-app"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "demo-app недоступен"
+          action: "Проверить контейнер/под: docker compose ps, kubectl get pods"
