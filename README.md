@@ -6,7 +6,7 @@ app/ — HTTP-сервис на Python (/, /healthz, /metrics) и multi-stage Do
 docker-compose.yml — сервис + Prometheus + Grafana с готовым datasource.
 monitoring/ — конфиг Prometheus и правило алерта DemoAppDown с указанием действия.
 helm/demo-app/ — Helm-чарт: Deployment (2 реплики, readiness/liveness probes, resources), Service.
-- `.gitlab-ci.yml` — пайплайн GitLab CI: lint (py_compile, yamllint, hadolint) → сборка образа и smoke-тест `/healthz`. Проект в GitLab: <вставь ссылку на свой проект>
+- `.gitlab-ci.yml` — пайплайн GitLab CI: lint (py_compile, yamllint, hadolint) → сборка образа и smoke-тест `/healthz`. Проект в GitLab: <https://gitlab.com/legenda125/devops-portfolio>
 
 Запуск локально
 docker compose up --build
